@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const TweetBody = ({ content, image, id }) => {
+const TweetBody = ({ content, imagesrc, id }) => {
   const navigate = useNavigate();
   const navigateToTweet = () => {
     navigate(`/tweet/${id}`);
@@ -8,7 +8,7 @@ const TweetBody = ({ content, image, id }) => {
   return (
     <div onClick={navigateToTweet}>
       <p className="tweet-text">{content}</p>
-      <img src={image} alt="Tweet Image" height={300} width={400} />
+      <img src={imagesrc} alt="Tweet Image" height={300} width={400} />
     </div>
   );
 };
